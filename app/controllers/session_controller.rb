@@ -5,13 +5,18 @@ class SessionController < ApplicationController
 
   end
 
-  # Sign up form
+  # Post request from login form
   def create
 
   end
 
+  # Sign up form
+  def sign_up
+
+  end
+
   # Post request from sign up form
-  def create_client
+  def create_sign_up
 
   end
 
