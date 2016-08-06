@@ -10,13 +10,23 @@ class SessionController < ApplicationController
 
   end
 
-  # Sign up form
-  def sign_up
+  # Sign up form candidates
+  def sign_up_candidate
 
   end
 
-  # Post request from sign up form
-  def create_sign_up
+  # Post request from candidate sign up form
+  def candidate_sign_up
+
+  end
+
+  # Sign up form clients
+  def sign_up_client
+
+  end
+
+  # Post request from client sign up form
+  def client_sign_up
 
   end
 

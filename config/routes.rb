@@ -17,8 +17,10 @@ Rails.application.routes.draw do
   # SESSIONS
   get '/login' => 'session#new'
   post '/login' => 'session#create'
-  get '/sign_up' => 'session#sign_up'
-  post '/sign_up' => 'session#create_sign_up'
+  get '/sign_up/candidate' => 'session#sign_up_candidate'
+  post '/sign_up/candidate' => 'session#create_sign_up'
+  get '/sign_up/client' => 'session#sign_up_client'
+  post '/sign_up/client' => 'session#client_sign_up'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
