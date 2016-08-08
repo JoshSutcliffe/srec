@@ -1,0 +1,24 @@
+<h1>Client Sign up form</h1>
+
+<form action="/sign_up_client" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="">Email</label>
+  <input type="text" name="email">
+
+  <label for="">First Name</label>
+  <input type="text" name="firstName">
+
+  <label for="">Last Name</label>
+  <input type="text" name="lastName">
+
+  <label for="">Company Name</label>
+  <input type="text" name="companyName">
+
+  <label for="">Company Location</label>
+  <input type="text" name="companyLocation">
+
+  <label for="">Password</label>
+  <input type="text" name="password">
+  <button>Submit</button>
+
+</form>

@@ -1,21 +1,15 @@
-<h1>Create a job page</h1>
+<h1>Form for posting a job</h1>
 
-<form action="/create_job" enctype="multipart/form-data" method="post">
+<form action="/create_job" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <label for="">Company Name</label>
-  <input type="text" name="compnayName" placeholder="Required">
+  <input type="text" name="companyName">
 
   <label for="">Job Title</label>
-  <input type="text" name="email" placeholder="Required">
+  <input type="text" name="title">
 
   <label for="">Job Description</label>
-  <input type="text" name="description" placeholder="Required">
-
-  <label for="">Industry</label>
-  <input type="file" name="industry" placeholder="Required">
-
-  <label for="">Location</label>
-  <input type="file" name="location" placeholder="Required">
+  <input type="text" name="description">
 
   <label for="">Employment Type</label>
   <select name="hours">
@@ -25,11 +19,14 @@
     <option value="freelance">Freelance</option>
   </select>
 
+  <label for="">Industry</label>
+  <input type="text" name="industry">
+
   <label for="">Company Logo</label>
   <input type="file" name="logo">
 
   <label for="">Company Video</label>
   <input type="file" name="video">
-
   <button>Submit</button>
+
 </form>

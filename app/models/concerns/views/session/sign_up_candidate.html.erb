@@ -1,0 +1,18 @@
+<h1>Candidate Sign up form</h1>
+
+<form action="/sign_up_candidate" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="">Email</label>
+  <input type="text" name="email">
+
+  <label for="">First Name</label>
+  <input type="text" name="first_name">
+
+  <label for="">Last Name</label>
+  <input type="text" name="last_name">
+
+  <label for="">Password</label>
+  <input type="text" name="password">
+  <button>Submit</button>
+
+</form>
