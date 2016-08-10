@@ -2,11 +2,30 @@ class SessionController < ApplicationController
 
   # Login form
   def new
-
+    render :new
   end
 
   # Post request from login form
   def create
+    # Serach for candidate
+    if Candidate.find_by(email: params[:email])
+      candidate = Candidate.find_by(email: params[:email])
+      if candidate && candidate.authenticate(params[:password])
+        session[:candidate_id] = candidate_id
+        redirect_to '/'
+      end
+    # Now check if its a client
+    elsif Client.find_by(email: params[:email])
+      candidate = Candidate.find_by(email: params[:email])
+      if client && client.authenticate(params[:password])
+        session[:client_id] = client_id
+        redirect_to '/'
+      end
+    end
+    # If neither work, go back to login form
+    else
+      render :new
+    end
 
   end
 
